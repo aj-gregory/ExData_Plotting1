@@ -33,7 +33,7 @@ createPlot4 <- function() {
   lines(datetime,sm1)
   lines(datetime,sm2, col = 'red')
   lines(datetime,sm3, col = 'blue')
-  legend("topright", legend = c('Sub_metering_1','Sub_metering_2','Sub_metering_3'), lwd = 1, col = c('black','red','blue'))
+  legend("topright", legend = c('Sub_metering_1','Sub_metering_2','Sub_metering_3'), lwd = 1, col = c('black','red','blue'), box.lwd = 0)
   
   # fourth plot
   Global_reactive_power <- as.numeric(as.character(hpc$Global_reactive_power))
