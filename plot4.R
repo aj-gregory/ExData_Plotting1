@@ -11,10 +11,10 @@ createPlot4 <- function() {
   hpc <- hpc[!hpc$Date < as.Date('2007-02-01'),]
   hpc <- hpc[!hpc$Date > as.Date('2007-02-02'),]
   
+  png(filename = "plot4.png", bg = "transparent")
   par(mfrow = c(2,2))
   
   # first plot
-  png(filename = "plot4.png", bg = "transparent")
   datetime <- hpc$DateTime
   power <- as.numeric(as.character(hpc$Global_active_power))
   plot(datetime,power, type = 'n', ylab = "Global Active Power (kilowatts)", xlab = "")  
